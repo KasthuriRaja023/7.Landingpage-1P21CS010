@@ -1,0 +1,131 @@
+body, html {
+  font-family: sans-serif, 'Arial';
+  height: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin: 0 !important;
+  position: relative;
+  overflow-x: hidden;
+}
+#target {
+  position: relative;
+  height: auto;
+  max-width: 1700px;
+  background-color: #081126;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin: 0 auto !important;
+  overflow-x: hidden;
+}
+.left-arrows, .right-arrows {
+  position: absolute;
+  overflow: hidden;
+  background-image: url("https://parking.bodiscdn.com/parking/arrows-bg-single.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index:1;
+  width: 50%;
+  height: 680px;
+  top: 140px;
+}
+.left-arrows {
+  background-position: top right;
+  transform: scaleX(-1) scale(1) translateX(0vw);
+  left: 0px;
+}
+.right-arrows {
+  background-position: top right;
+  transform: scale(1);
+  right: 0px;
+}
+main {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 95vh;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+main h1 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: #dedede;
+}
+main section {
+  flex: 1;
+  padding: 20px;
+  width: 100%;    
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+section .ad-block {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100px;
+}
+footer {
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0px;
+  width: 100%;
+  background-color: #000;
+  color: #343b4d;
+}
+footer a {
+  color: #343b4d;
+}
+
+@media only screen and (min-width: 1400px) {
+  .left-arrows {
+      transform: scaleX(-1) scale(1) translateX(0vw);
+      background-size: 54%;
+      width: 54%;
+  }
+  .right-arrows {
+      transform: translateX(0vw) scale(1);
+      background-size: 54%;
+      width: 54%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .left-arrows {
+      width: 74%;
+      transform: scaleX(-1) translateX(130px) translateY(20px);
+  }
+  .right-arrows {
+      transform: translateX(130px) translateY(20px);
+      width: 74%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .left-arrows {
+      transform: scaleX(-1) translateX(300px) translateY(10px);
+      width: 100%;
+  }
+  .right-arrows {
+      transform: translateX(300px) translateY(10px);
+      width: 100%;
+  }
+  
+}
+@media only screen and (max-width: 782px) {
+  .left-arrows, .right-arrows {
+      display: none;
+  }
+  section .ad-block {
+      padding: 0px 20px;
+  }
+}
+
+
